@@ -1,7 +1,7 @@
-### Raj Bharatbhai Choksi - rajchoksi1997
-### Piyush Gade - Piyush1729
-### Alekhya Pasupuleti - AlekhyaPasupuleti
-### Mohamed Shafeeq Usman - MdShafeeqU
+### Raj Bharatbhai Choksi - [rajchoksi1997](https://github.com/rajchoksi1997)
+### Piyush Gade - [Piyush1729](https://github.com/Piyush1729)
+### Alekhya Pasupuleti - [AlekhyaPasupuleti](https://github.com/AlekhyaPasupuleti)
+### Mohamed Shafeeq Usman - [MdShafeeqU](https://github.com/MdShafeeqU)
 
 # Comparative Study of Machine Learning models in Drought Prediction
 
