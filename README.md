@@ -7,7 +7,7 @@
 # Comparative Study of Machine Learning models in Drought Prediction
 
 ## Problem Statement:
-Predicting drought and its severity using various machine learning models and comparing those results.
+Using machine learning models to predict drought and comparing their results using various performance metrics.
 
 ## Abstract
 Agriculture is an important part of the US economy. According to the US government agriculture contributed $1.5 trillion to the economy in 2020 which is a 5% share. However global warming and changes in climate leads to significant drought in various parts of the country which adversely affects agriculture. Unlike other natural disasters, Drought develops slowly and has long term consequences. Hence by leveraging machine learning we can help farmers in taking preventive measures and minimize their loss. 
