@@ -18,4 +18,4 @@ We will be using dataset from the [US drought monitor](https://droughtmonitor.un
 
 ## Insights and plots after preprocessing of dataset are included in the DroughtPrediction.pdf file.
  
-
+Dataset Link: https://drive.google.com/file/d/1pcIRbSgmF6jwd7yemi2dk7SbqjJePqI_/view?usp=sharing
