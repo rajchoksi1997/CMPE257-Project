@@ -4,7 +4,7 @@
 ### Alekhya Pasupuleti - [AlekhyaPasupuleti](https://github.com/AlekhyaPasupuleti)
 ### Mohamed Shafeeq Usman - [MdShafeeqU](https://github.com/MdShafeeqU)
 
-# Comparative Study of Machine Learning models in Drought Prediction
+# Project Title: Comparative Study of Machine Learning models in Drought Prediction
 
 ## Problem Statement:
 Using machine learning models to predict drought and comparing their results using various performance metrics.
