@@ -80,6 +80,9 @@ Fig. Multiclass ROC curve for Decision Tree with Unsampled Data
 ![Fig()](./images/roc_with_ht_without_resampling.png "Fig. Decision Tree Structure")
 Fig. Multiclass ROC curve for Decision Tree with Unsampled Data and right Hyperparameters
 
+![Fig()](./images/dt_analysis.png "Fig. ")
+Fig. Learning Analysis of Decision Tree
+
 # Example Analysis
 
 # Conclusions
