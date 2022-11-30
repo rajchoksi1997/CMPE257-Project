@@ -1,6 +1,6 @@
 import preprocessing_raj_choksi
 import decision_tree_raj_choksi
-
+import knn_alekhya_pasupuleti
 import pickle
 
 X_train_upsampled_LDA, X_test_upsampled_LDA_transformed, X_train_downsampled_nm_LDA, X_test_downsampled_nm_LDA_transformed, X_train_upsampled_pca, X_test_upsampled_transformed_pca, x_train_downlsampled_pca, x_test_downsampled_transformed_pca, x_train_downlsampled_pca, x_test_downsampled_transformed_pca,x_train_dres, y_train_dres, x_train_dres_nm, y_train_dres_nm, x_train_ures_SMOTE, y_train_ures_SMOTE, x_test, y_test,x_train,y_train = preprocessing_raj_choksi.raj_preprocessing()
@@ -17,7 +17,15 @@ no_resampled_model = decision_tree_raj_choksi.decisionTreeWithoutResampledData(x
 print(decision_tree_raj_choksi.decisionTreeWithoutResamplingHyperParameterTuning(x_train,y_train,no_resampled_model))
 print(decision_tree_raj_choksi.decisionTreeWithTuning(x_train,y_train,x_test,y_test))
 
-
+no_resampling_model = knn_alekhya_pasupuleti.knnWithoutResampling(x_train,y_train,x_test,y_test)
+print(knn_alekhya_pasupuleti.knnWithoutResamplingHyperParameterTuning(x_train,y_train,no_resampling_model))
+print(knn_alekhya_pasupuleti.knnWithoutResamplingRightParameters(x_train,y_train,x_test,y_test))
+print(knn_alekhya_pasupuleti.knnWithUpsampledData(x_train_ures_SMOTE,y_train_ures_SMOTE,x_test,y_test))
+print(knn_alekhya_pasupuleti.knnWithNearDownsampledData(x_train_dres_nm,y_train_dres_nm,x_test,y_test))
+print(knn_alekhya_pasupuleti.knnWithPCAandUpsampledData(X_train_upsampled_pca,y_train_ures_SMOTE,X_test_upsampled_transformed_pca,y_test))
+print(knn_alekhya_pasupuleti.knnWWithLDAandUpsampledData(X_train_upsampled_LDA,y_train_ures_SMOTE,X_test_upsampled_LDA_transformed,y_test))
+print(knn_alekhya_pasupuleti.knnWithLDAandDownsampledData(X_train_downsampled_nm_LDA,y_train_dres_nm,X_test_downsampled_nm_LDA_transformed,y_test))
+print(knn_alekhya_pasupuleti.knnWithPCAandDownsampledData(x_train_downlsampled_pca,y_train_dres_nm,x_test_downsampled_transformed_pca,y_test))
 
 
 
