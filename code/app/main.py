@@ -1,6 +1,7 @@
 import preprocessing_raj_choksi
 import decision_tree_raj_choksi
 import knn_alekhya_pasupuleti
+import logistic_regression_piyush_gade
 import pickle
 import random_forest_mohamed_shafeeq
 
@@ -38,3 +39,18 @@ no_resampling_model = random_forest_mohamed_shafeeq.randomForestWithoutResamplin
 print(random_forest_mohamed_shafeeq.randomForestWithoutResamplingHyperparaTuning(x_train,y_train,x_test,y_test,no_resampling_model))
 print(random_forest_mohamed_shafeeq.randomForestNoresamplingRightParameters(x_train,y_train,y_test,x_test))
 
+
+#Logistic Regression with Near miss downsampled data
+logisticRegressionNm(x_train_dres_nm, y_train_dres_nm, x_test, y_test)
+logisticRegressionNmLda(X_train_downsampled_nm_LDA, y_train_dres_nm, X_test_downsampled_nm_LDA_transformed, y_test)
+logisticRegressionNmPca(x_train_downlsampled_pca, y_train_dres_nm, x_test_downsampled_transformed_pca, y_test)
+#Logistic Regression with SMOTE upsampled data
+logisticRegressionSmote(x_train_ures_SMOTE, y_train_ures_SMOTE, x_test, y_test)
+logisticRegressionSmoteLda(X_train_upsampled_LDA, y_train_ures_SMOTE, X_test_upsampled_LDA_transformed, y_test)
+logisticRegressionSmotePca(X_train_upsampled_pca, y_train_ures_SMOTE, X_test_upsampled_transformed_pca, y_test)
+#Logistic Regression with Neighborhood cleaning rule downsampled data
+logisticRegressionNcr(x_train_dres, y_train_dres, x_test, y_test)
+logisticRegressionNcrLda(x_train_dres, y_train_dres, x_test, y_test)
+logisticRegressionNcrPca(x_train_dres, y_train_dres, x_test, y_test)
+#Logistic Regression with 'Not' resampled data
+logisticRegressionNres(x_train, y_train, x_test, y_test)
