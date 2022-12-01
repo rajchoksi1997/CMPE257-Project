@@ -142,6 +142,7 @@ For the feasibility of learning, we need to have in-sample error, approximately 
 *Fig. Multiclass ROC curve for Logistic Regression without Resampling*
 ![Fig()](./images/F1%20scores%20for%20logistic%20regression.png "")
 *Fig. F1 Score analysis for Logistic Regression*
+
 Although the above-mentioned models have better f1 scores, from the below table we can see that these models have poor recall values for minority class labels, meaning they are biased towards the majority class. Logistic regression with SMOTE oversampling gives better recall of non majority classes. 
 ![Fig()](./images/Recall%20table.png "")
 *Fig. Recall Analysis for Each class on Logistic Regression*
@@ -169,7 +170,7 @@ While using upsampled Data along with a combination of LDA and PCA gives better 
 *Fig. Multiclass ROC curve for Decision Tree with SMOTE Upsampled Data and LDA*
 
 ## Decision Tree Algorithm with Unsampled Data and HyperParameter Tuning
-To optimize the above result we performed hyperparameter tuning on upsampled Data and retrieved the top 5 parameters. Max_depth of 80 gave the best results. Using these parameters with unsampled Data improved the F1 score for testing to >0.75 compared to the training F1 score of 0.9. Upon analyzing the multiclass ROC curve it is observed than class 5 has even higher false positive rate compared to near miss downsampled data and similar to upsampled data.
+To optimize the above result we performed hyperparameter tuning on upsampled Data and retrieved the top 5 parameters. Max_depth of 80 gave the best results. Using these parameters with unsampled Data improved the F1 score for testing to more than 0.75 compared to the training F1 score of 0.9. Upon analyzing the multiclass ROC curve it is observed than class 5 has even higher false positive rate compared to near miss downsampled data and similar to upsampled data.
 ![Fig()](./images/roc_unsampled_data.png "Fig. ")
 *Fig. Multiclass ROC curve for Decision Tree with Unsampled Data*
 ![Fig()](./images/roc_with_ht_without_resampling.png "Fig. Decision Tree Structure")
@@ -243,6 +244,6 @@ For running Random Forest without resampled data, the F1 score we got for train 
 
 # Conclusions
 
-
+By analyzing the results of models we observed that logistic regression is the worst performing model as its both training and testing F1 scores are low hence we can conclude that linear models are suitable for our problem as they are not learning. Comparing the rest of the three models, Random Forest gave the best results with SMOTE upsampled data with a testing F1 score of more than 0.80. Addtionally Decision Tree and K-nearest Neighbor gave very similar results wherein they perform better with SMOTE upsampled data compared to downsampled and unsampled data.
 
 
