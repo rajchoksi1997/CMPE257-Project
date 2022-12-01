@@ -19,43 +19,40 @@ header-includes: |
 Drought estimation and its impact have always been a prime challenge in the agriculture sector. Hence we will be using meteorological data which includes wind, temperature, air pressure, and precipitation information from the year 2000 to 2016 to predict drought severity. Weather conditions and precipitation levels at different heights from the sea level will play important indicators in predicting droughts. We aim to use supervised learning models such as Logistic Regression, Decision Tree, K-Nearest Neighbor, and Logistic Regression for the study and compare their results using performance metrics such as F1 score, accuracy, recall, precision, and ROC curve. The purpose of this study is two folds first is to understand whether a linear model such as logistic regression is preferable for drought classification and understand the performance of each model and which one of them is best suited for our problem.
 
 # Data
-The dataset for the project was taken from the source US Drought monitor. It contains 18 attributes of meteorological measures which can estimate Drought. The dataset has about 10 million records which were recorded for years in a particular location in the US. With this data, the aim is to make an analysis of the drought prediction on the forecast data, with this we can generalize the US forecast to predict drought in other regions around the world. Abnormally Dry (D0) to Exceptional Drought (D5) is the range of drought score in the dataset. 
+Our source of data is US Drought monitor which provides meteorological statistics and data related to drought. There are a total of 10 million records in our dataset and using this data we will be classifing different levels of drought from class 0 (low severity) to class 5 (high severity).
 
 Following are the attributes in the dataset:
 ![Fig()](./images/attribute_names.PNG "")
-<font size = "1">*Attribute Name*</font>
+<font size = "1">*Fig. Attribute Names*</font>
 
 # Exploratory Data Analysis
-## Identifying Imbalance in Dataset
-Since the dataset is labeled, the distribution of scores (according to labels) is examined to determine whether or not the data is biased. The below Figure shows clear imbalance in the dataset with score 5 having very less records of data and score 0 having high records of data. 
+## Imbalance in Data
+The distribution score of the labeled data is analyed to determine if there is a bias in the dataset. The image below explains the imbalance in the dataset wherein score 0 has very high number of records and score 5 having less number of records.
 
 ![Fig()](./images/score_distribution.png "Fig. Distribution of Score")
 <font size = "1">*Fig. Distribution of Score*</font>
 
-## Univariate Data Analysis of the features
-To determine the skewness in each feature of the dataset, univariate data analysis is performed. Distribution of each attribute is shown in the below Figures. From the figures we can notice that PRICTOT ,WS10M-MIN,WS50M-MIN and WS10M-RANGE are left skewed and PS, T2M, T2M-MAX are right skewed, while other features are distributed across the ranges fairly. 
-
+## Univariate Data Analysis
+Univariate analysis is used to analyze the skewness in every feature of the dataset. The below image shows distribution of each attribute. It is observed that WS10M-MIN, WS50M-MIN, PRICTOT and WS10M-RANGE are left skewed and T2M-MAX, PS and T2M are right skewed and the rest of the features are distributed evenly.
 ![Fig()](./images/features_distribution.png "Fig. Distribution of Features in the Dataset")
 *Fig. Distribution of Features in the Dataset*
 
 ## Bivariate Analysis
-To understand the strong correlation between features we used scatter plots. We can see from the below pictures that between the independent variables that have shown strong positive correlation, WS10M - WS50M have a one-to-one  relationship. However, the relationship between  pairs T2M – T2MDEW and QV2M - T2M is not so linear, but the overall correlation is strong.
-
+Scatter plot is used to understand the correlation among the features. It is observed from the below image that out of independent variables with positive correlation, WS10M - WS50M has one-to-one relation. In contrast to that QV2M - T2M and T2M – T2MDEW have non linear relationship but strong correlation.
 ![Fig()](./images/bivariate_analysis.jpg "Fig. Bivariate Analysis")
 *Fig. Bivariate Analysis*
 
 ## Correlation Matrix
-The heatmap is used to represent the correlation between features. The figure from below shows that the features QV2M, T2M, T2MDEW, T2MWET, T2M-MAX, T2M-MIN and TS have shown strong positive correlation. Also, WS10M, WS10M-MAX and WS10M-MIN have shown a strong positive correlation. Finally, WS50M, WS50M-MAX and WS50M-MIN show strong positive correlation. 
-
+The heatmap is used to represent the correlation between features. The figure from below shows that the features T2M, T2MWET, T2MDEW, T2M-MIN, QV2M, T2M-MAX and TS has positive correlation. Also, WS10M-MAX, WS10M and WS10M-MIN has positive correlation. Lastly, WS50M
+, WS50M-MIN and WS50M-MAX show positive correlation. 
 ![Fig()](./images/Correlation_matrix.jpg "Fig. Correlation Matrix")
 *Fig. Correlation Matrix*
 
 # Data Preprocessing
-As drought scores are updated once a week whereas meteorological statistics are updated every day, the dataset included records without labels. Since the project aims to perform supervised learning algorithms, the record without labels were removed. The count came down to 2,756,796 rows. Data set contained no null in any attributes. For analysis, Date was split into Day, Month and Year columns. 
+In the initial step of data preprocessing we removed the unlabeled data and reduced the count of records to 2.7 million. Secondly, we observed that there are no null values. Lastly, we split the categorical date feature into numerical values to day, month and year.
 
 ## Outlier treatment
-Box plot is one of the best methods for the representation of the outliers. It is used to find the spread of values. The box plots from the below show the features PRECTOT, PS,WS10M, WS10M-RANGE,WS50MRANGE,WS50M-MIN. There are no outliers in QV2M.
-
+We have utilized box plot for outlier representation as it helps in finding the spread of values. The below plots show PRECTOT, PS, WS10M, WS10M-RANGE, WS50MRANGE, WS50M-MIN features and we observed that there are no outliers in QV2M feature.
 ![Fig()](./images/boxplot_for_outliers.jpg "")
 *Fig. Box plot for outlier analysis*
 
