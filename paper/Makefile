@@ -1,6 +1,6 @@
 all: paper.md paper.bib
 	pandoc -r markdown+smart+simple_tables+table_captions+yaml_metadata_block \
-		--pdf-engine=pdflatex \
+		--pdf-engine=/Library/TeX/texbin/pdflatex \
 		--variable classoption=twocolumn \
 		--citeproc \
 		--filter scripts/table-filter.py \
@@ -15,7 +15,7 @@ all: paper.md paper.bib
 
 tex: paper.md paper.bib
 	pandoc -r markdown+smart+simple_tables+table_captions+yaml_metadata_block \
-		--pdf-engine=pdflatex \
+		--pdf-engine=/Library/TeX/texbin/pdflatex \
 		--variable classoption=twocolumn \
 		--filter pandoc-citeproc \
 		--filter scripts/table-filter.py \
