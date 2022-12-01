@@ -241,6 +241,6 @@ For running Random Forest without resampled data, the F1 score we got for train 
 
 # Conclusions
 
-By analyzing the results of models we observed that logistic regression is the worst performing model as its both training and testing F1 scores are low hence we can conclude that linear models are suitable for our problem as they are not learning. Comparing the rest of the three models, Random Forest gave the best results with SMOTE upsampled data with a testing F1 score of more than 0.80. Additionally, Decision Tree and K-nearest Neighbor gave very similar results wherein they perform better with SMOTE upsampled data compared to downsampled and unsampled data.
+By analyzing the results of models we observed that logistic regression is the worst performing model as its both training and testing F1 scores are low hence we can conclude that linear models are not suitable for our problem as they are not learning. Comparing the rest of the three models, Random Forest gave the best results with SMOTE upsampled data with a testing F1 score of more than 0.80. Additionally, Decision Tree and K-nearest Neighbor gave very similar results wherein they perform better with SMOTE upsampled data compared to downsampled and unsampled data.
 
 
